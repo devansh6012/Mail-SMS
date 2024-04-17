@@ -2,8 +2,8 @@ const express = require('express');
 const twilio = require('twilio');
 const app = express()
 
-const accountSid = 'ACcd101ec2b9d96b87502d0de75424ca3d';
-const authToken = 'c4fb6ce5fae5b1b26400c4a2450a39e3';
+const accountSid = process.env.TWILio_ACCOUNT_SID;
+const authToken = TWILIO_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 
 async function sendSMS () {
